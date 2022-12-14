@@ -3,7 +3,7 @@
 
 #include <ctime>
 #include <cmath>
-#include <string>
+#include <cstring>
 #include <map>
 #include <ostream>
 
@@ -43,6 +43,7 @@ public:
     static Date CurrentDate();
     uint64_t DateInSec(uint hour = 1, uint min = 1, uint sec = 1);
 
+    // Can be modified and executed using difftime or comparison in seconds
     bool operator > (Date d);
     bool operator < (Date d);
     bool operator == (Date d);
@@ -83,6 +84,7 @@ public:
 
     static Time CurrentTime();
 
+    // Can be modified and executed using difftime or comparison in seconds
     bool operator > (Time t);
     bool operator < (Time t);
     bool operator == (Time t);
